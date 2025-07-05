@@ -1,0 +1,69 @@
+.layout-content {
+  max-width: 780px;
+}
+.w-full {
+  width: 100% !important;
+}
+
+.theme--dark {
+  .div-nuxt-content {
+    background-color: #111111 !important;
+  }
+}
+.div-nuxt-content {
+  background-color: #f2f5f8 !important;
+}
+
+.text-label{
+  color: #333;
+  font-weight: 400;
+  line-height: 2;
+  // vertical-align: baseline;
+}
+
+// label
+.label {
+  padding: 3px 7px;
+  display: inline-flex;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  text-align: center;
+}
+
+.label-primary{
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.label-info{
+  color: #fff;
+  background-color: #5bc0de;
+}
+
+.label-warning{
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.label-success{
+  background-color: #5cb85c;
+  color:#fff;
+}
+
+.label-danger{
+  color: #fff;
+  background-color: #d9534f;
+}
+
+.label-secondary {
+  background-color: #777;
+  color: #fff;
+}
+
+.label-dark {
+  color: #fff;
+  background-color: #777;
+}

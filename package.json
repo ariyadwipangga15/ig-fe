@@ -1,0 +1,62 @@
+{
+  "name": "ptpn-bpd-fe",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start --hostname 192.168.8.194 --port 3000",
+    "prod": "nuxt start --hostname 10.10.10.15 --port 8800",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/moment": "^1.6.1",
+    "@vue/composition-api": "^1.0.0-rc.12",
+    "apexcharts": "^3.35.2",
+    "child_process": "^1.0.2",
+    "cookie-universal-nuxt": "^2.1.4",
+    "core-js": "^3.9.1",
+    "date-fns": "^2.19.0",
+    "dayjs": "^1.10.4",
+    "fs": "0.0.1-security",
+    "highcharts": "^11.1.0",
+    "highcharts-vue": "^1.4.2",
+    "nuxt": "^2.15.3",
+    "nuxt-property-decorator": "^2.9.1",
+    "nuxt-socket-io": "^2.0.3",
+    "socket.io-client": "^2.5.0",
+    "sweetalert2": "^10.16.0",
+    "v-idle": "^0.2.1",
+    "vue": "^2.6.14",
+    "vue-apexcharts": "^1.6.2",
+    "vue-class-component": "^7.2.6",
+    "vue-cookies": "^1.7.4",
+    "vue-property-decorator": "^9.1.2",
+    "vue-shortkey": "^3.1.7",
+    "vue-touch-keyboard": "^0.3.2",
+    "vue2-filters": "^0.13.0",
+    "vuelidate": "^0.7.6",
+    "vuetify-datetime-picker": "^2.1.1",
+    "vuetify-money": "^1.2.0",
+    "vuex-persistedstate": "^4.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/vuetify": "^1.11.3",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "material-design-icons-iconfont": "^6.1.0",
+    "postcss": "^8.4.24",
+    "postcss-discard-comments": "^6.0.0",
+    "prettier": "^2.2.1"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3333"
+    }
+  }
+}

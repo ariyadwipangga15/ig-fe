@@ -1,0 +1,36 @@
+stages:
+  - build
+
+job :
+  stage: build
+  script:
+    - |
+      echo 'NODE_ENV="development"
+      API_HOST="http://10.10.10.15:8001"
+      DOMAIN="http://10.10.10.15:8800"
+      BASE_BE="/"
+      BASE="/"
+      TOKEN_KEY=secretgsi@2023
+      PORT=8800' >> .env
+    - echo "mengisi .env"
+    - npm install --save --legacy-peer-deps
+
+# deploy_staging:
+#   stage: deploy
+# #   script:
+#     - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY gsi@10.10.10.15 "
+#       sudo su && cd /opt/CODE/PTPN/ims/ptpn-inventory-fe/ && npm run build && pm2 restart 19" 
+#     - echo "build OKE"
+
+# job deploy:
+#   stage: deploy
+#   script:
+    - npm run build
+    - echo "build"
+    # - sudo pm2 start "npm run prod" --name ptpn-ims-fee
+    - sudo pm2 restart 29
+    - echo "pm2 restart"
+  only:
+    - main
+  tags:
+    - ptpn-inventory
