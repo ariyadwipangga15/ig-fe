@@ -22,7 +22,7 @@
       "
     >
       <span>
-        &copy; {{ new Date().getFullYear() }} Aplikasi - Inventory PTPN XII
+        &copy; {{ new Date().getFullYear() }} Aplikasi - Ig Instan
       </span>
     </v-footer>
 

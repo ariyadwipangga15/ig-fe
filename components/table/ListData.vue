@@ -72,8 +72,17 @@
               )"
               v-slot:[`item.${header.value}`]="{ value }"
             >
-              <!-- v-slot:[`item.${header.value}`]="{ header, value }" -->
               {{ header.formatter(value) }}
+            </template>
+            <template v-slot:[`item.gambar`]="{ item }">
+               <v-img
+                :src="`${item.path_image}`"
+                aspect-ratio="1.5"
+                width="100%"
+                class="rounded-lg" 
+                contain
+              ></v-img>
+
             </template>
             <template v-slot:[`item.actions`]="{ item }">
               <v-btn
