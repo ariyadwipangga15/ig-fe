@@ -17,8 +17,9 @@ export default class PostIGComponent extends Vue {
   public reverse = false;
   public headers = [
     { text: "No", value: "no", align: "center", sortable: false, width: "5%" },
-    { text: "Judul", value: "judul", width: "35%" },
-    { text: "Deksripsi", value: "deskripsi", width: "50%" },
+    { text: "Judul", value: "judul", width: "20%" },
+    { text: "Deksripsi", value: "deskripsi", width: "25%" },
+    { text: "Gambar", value: "gambar", width: "10%" },
     {
       text: "Aksi",
       align: "center",
@@ -99,10 +100,16 @@ export default class PostIGComponent extends Vue {
       formData.append('deskripsi', this.editedItem.deskripsi);
       formData.append('file', this.editedItem.file); 
       formData.append('fileOld', this.editedItem.path_image); 
+      formData.append('is_post', this.editedItem.is_post ? this.editedItem.is_post : false);
+      formData.append('is_like', this.editedItem.is_like ? this.editedItem.is_like : false);
+      formData.append('is_komentar', this.editedItem.is_komentar ? this.editedItem.is_komentar : false);
     }else{
       formData.append('judul', this.editedItem.judul);
       formData.append('deskripsi', this.editedItem.deskripsi);
       formData.append('file', this.editedItem.file);
+      formData.append('is_post', this.editedItem.is_post ? this.editedItem.is_post : false);
+      formData.append('is_like', this.editedItem.is_like ? this.editedItem.is_like : false);
+      formData.append('is_komentar', this.editedItem.is_komentar ? this.editedItem.is_komentar : false);
     }
   
     this.$postIgService()

@@ -63,6 +63,11 @@
                           >Login</v-btn
                         >
                       </div>
+                        
+                        
+                        <p class="mt-2" style="text-align: center; font-size: 14px">
+                    <a href="/">Home</a> | Belum punya akun? <a href="register">daftar</a>
+                  </p>
                     </v-form>
                     </v-container>
                   </v-col>

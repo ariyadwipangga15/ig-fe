@@ -42,7 +42,12 @@ export const actions = {
       // set localy
       commit('user', data.user)
       commit('token', data.token)
-      this.$router.push('/dashboard')
+      if(data.user.role.id=="HA02"){ 
+        this.$router.push('/ig')
+      }else{
+        this.$router.push('/dashboard')
+      }
+     
     } catch (err) {
       console.log('error.login', err)
       throw err

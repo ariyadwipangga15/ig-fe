@@ -47,6 +47,24 @@
       ></v-file-input>
         </v-col>
       </v-row>
+      <v-row>
+            <v-col cols="12" md="4">
+              <v-checkbox v-model="editedItem.is_post" label="Post" color="blue" hide-details>
+              </v-checkbox>
+             
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-checkbox v-model="editedItem.is_like" label="Like" color="blue"
+                hide-details>
+              </v-checkbox>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-checkbox v-model="editedItem.is_komentar" label="Komentar" color="blue" hide-details>
+              </v-checkbox>  
+              
+            </v-col>
+           
+          </v-row>
     </DialogForm>
   </div>
 </template>
