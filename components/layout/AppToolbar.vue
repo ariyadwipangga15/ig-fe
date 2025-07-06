@@ -166,7 +166,8 @@ export default {
           "Apakah Anda yakin akan logout?"
         )
       ) {
-        this.$router.push("/logout");
+        // this.$router.push("/logout");
+        this.$store.dispatch('auth/logout')
       }
     },
     handleChangeLocale({ value }) {
