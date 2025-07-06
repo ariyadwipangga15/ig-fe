@@ -56,11 +56,19 @@ export const actions = {
       window.$nuxt.$root.$loading.finish()
     }
   },
-  logout() {
-    if (window.confirm('Apakah Anda yakin akan logout?')) {
-      this.$router.push('/logout')
-    }
-  },
+  // logout() {
+  //   if (window.confirm('Apakah Anda yakin akan logout?')) {
+  //     this.$router.push('/logout')
+  //   }
+  // },
+
+  logout({ commit }) {
+      commit('user', null)
+      commit('token', null)
+      // commit('menus', [])
+      this.$cookies.remove(this.$config.tokenKey)
+      this.$router.push('/')
+  },  
   async loadAuthMenu({ commit }, roleId) {
     const { data } = await this.$axios.$get(`/menu-user`, {
       params : {

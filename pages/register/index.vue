@@ -132,7 +132,7 @@ export default {
     },
 
     async save() {
-      this.loading = true
+    //   this.loading = true
       var dataObj = {
         nama: this.editedItem.nama.replace("'", "`"),
         email: this.editedItem.email,
@@ -141,7 +141,6 @@ export default {
         role : 'HA02',
       }
       try {
-        await this.$recaptcha.reset()
       } catch (error) {
         console.log('Login error:', error)
       }
@@ -150,13 +149,14 @@ export default {
         .then((response) => {
           if (response.success == true) {
             setTimeout(() => {
-              this.loading = false
               this.swalAlert('Berhasil Register', 'success', response.message)
+            //   this.loading = false
               this.reset()
               this.$router.push('/')
             }, 2000)
           } else {
-            this.loading = false
+            // this.loading = false
+            this.reset()
             this.swalAlert('Maaf', 'error', response.message)
           }
         })
