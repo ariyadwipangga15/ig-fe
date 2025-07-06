@@ -11,11 +11,11 @@
         <!-- Header -->
         <v-card-title class="d-flex justify-space-between">
           <div class="d-flex align-center">
-            <v-avatar size="36" class="mr-3">
-              <img src="/_nuxt/assets/avatar/boy.png" alt="avatar" />
-            </v-avatar>
+            <v-avatar size="36" class="mr-2" style="min-width: 36px;">
+  <img src="/_nuxt/assets/avatar/boy.png" alt="avatar" style="object-fit: cover;" />
+</v-avatar>
             <div>
-              <small class="text-grey">{{ postItem.created_at }}</small>
+              <small class="text-grey">{{ user.nama }}</small>
             </div>
           </div>
           <v-menu offset-y>
@@ -52,31 +52,6 @@
           </v-btn>
           <span class="ml-2">{{ postItem.likes || 0 }} suka</span>
         </v-card-actions>
-  
-        <!-- <v-card-text v-if="postItem.is_post">
-          <p class="mb-2">{{ postItem.deskripsi }}</p>
-  
-          <div
-            v-for="(comment, i) in postItem.komentar || []"
-            :key="i"
-            class="mb-1"
-          >
-            <strong>{{ comment.nama_user }}</strong>: {{ comment.komentar }}
-          </div>
-  
-          <v-text-field
-          v-if="postItem.is_komentar"
-            v-model="commentInput"
-            :label="user ? 'Tulis komentar...' : 'Login untuk berkomentar'"
-            dense
-            hide-details
-            append-icon="mdi-send"
-            :readonly="!user"
-            @click:append="submitComment(postItem)"
-            @focus="checkLogin"
-            />
-
-        </v-card-text> -->
         <v-card-text v-if="postItem.is_post">
   <p class="mb-4">{{ postItem.deskripsi }}</p>
 
@@ -86,9 +61,12 @@
     :key="i"
     class="d-flex align-start mb-3"
   >
-    <v-avatar size="28" class="mr-2">
+    <!-- <v-avatar size="30" class="mr-2">
       <img src="/_nuxt/assets/avatar/boy.png" alt="avatar" />
-    </v-avatar>
+    </v-avatar> -->
+    <v-avatar size="36" class="mr-2" style="min-width: 36px;">
+  <img src="/_nuxt/assets/avatar/boy.png" alt="avatar" style="object-fit: cover;" />
+</v-avatar>
     <div class="rounded px-3 py-2" style="background-color: #f5f5f5; width: 100%;">
       <strong>{{ comment.nama_user }}</strong>
       <small class="text-grey text-caption">{{ comment.created_at }}</small>
